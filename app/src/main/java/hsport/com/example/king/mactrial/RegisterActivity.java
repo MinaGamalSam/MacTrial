@@ -112,7 +112,7 @@ public class RegisterActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.camera_id:
-                takePhoto();
+                takePhotos();
                 break;
             case R.id.exit_id:
                 finish();
@@ -122,7 +122,7 @@ public class RegisterActivity extends AppCompatActivity {
         return true;
     }
 
-    private void takePhoto() {
+    private void takePhotos() {
         Intent photo = new Intent((android.provider.MediaStore.ACTION_IMAGE_CAPTURE));
         startActivityForResult(photo, PHOTOREQ);
     }
