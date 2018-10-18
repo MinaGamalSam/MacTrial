@@ -58,22 +58,16 @@ public class RegisterActivity extends AppCompatActivity {
                     name = nameInput;
                 } else {
                     alertMessage = alertMessage + "Invalid Name" + "\n";
-                           }
+                }
                 if (!emailView.equals("") && emailView.length() > 10) {
                     email = emailView.getText().toString();
                 } else {
-
-
-
                     alertMessage = alertMessage + "Invalid Email" + "\n";
                 }
                 if (!passwordView.equals("") && passwordView.length() > 7) {
                     password = passwordView.getText().toString();
                 } else {
-                    alert.setTitle("Error");
                     alertMessage = alertMessage + "Invalid Password " + "\n";
-                    alert.setPositiveButton("ok,I got it", null);
-
                 }
                 if (male.isChecked()) {
                     gender = "Male";
@@ -83,21 +77,19 @@ public class RegisterActivity extends AppCompatActivity {
                     alertMessage = alertMessage + "Choose Your Gender" + "\n";
                 }
 
-                if(!alertMessage.equals("")){
+                if (!alertMessage.equals("")) {
                     alert.setTitle("Error");
                     alert.setMessage(alertMessage);
                     alert.setPositiveButton("ok,I got it", null);
                     alert.show();
-                }else{
-                    Intent startProfile =new Intent(getBaseContext(),ProfileActivity.class);
+                } else {
+                    Intent startProfile = new Intent(getBaseContext(), ProfileActivity.class);
                     //startProfile.putExtra("namek",name);
-                    startProfile.putExtra("namek",name);
-                    startProfile.putExtra("emailk",email);
-                    startProfile.putExtra("passwordk",password);
-                    startProfile.putExtra("genderk",gender);
-                    startProfile.putExtra("imageFile",image);
-
-
+                    startProfile.putExtra("namek", name);
+                    startProfile.putExtra("emailk", email);
+                    startProfile.putExtra("passwordk", password);
+                    startProfile.putExtra("genderk", gender);
+                    startProfile.putExtra("imageFile", image);
                     startActivity(startProfile);
                 }
 
@@ -110,7 +102,7 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
        /* MenuInflater inflater =getMenuInflater();*/
-        getMenuInflater().inflate(R.menu.menu_main,menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
 
 
         return true;
@@ -118,7 +110,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.camera_id:
                 takePhoto();
                 break;
@@ -129,15 +121,16 @@ public class RegisterActivity extends AppCompatActivity {
         }
         return true;
     }
-    private void takePhoto(){
-        Intent photo=new Intent((android.provider.MediaStore.ACTION_IMAGE_CAPTURE));
-        startActivityForResult(photo,PHOTOREQ);
+
+    private void takePhoto() {
+        Intent photo = new Intent((android.provider.MediaStore.ACTION_IMAGE_CAPTURE));
+        startActivityForResult(photo, PHOTOREQ);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(requestCode==PHOTOREQ && resultCode==RESULT_OK){
-            image =(Bitmap)data.getExtras().get("data");
+        if (requestCode == PHOTOREQ && resultCode == RESULT_OK) {
+            image = (Bitmap) data.getExtras().get("data");
 
         }
     }
