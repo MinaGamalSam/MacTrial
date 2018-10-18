@@ -36,20 +36,24 @@ public class MainActivity extends AppCompatActivity  {
                 double temperature =0;
                 try {
                     temperature = Double.parseDouble(temp.getText().toString());
+
+                    if(celisuis.isChecked()){
+                        double celisuisTemp =(temperature - 32) * 5/9;
+                        result.setText("Result is: "+ celisuisTemp +" C" );
+
+                    }else if(fahrenheit.isChecked()){
+                        double faherhnietTemp =  (temperature * 9/5) + 32;
+                        result.setText("Result is: " + faherhnietTemp +" F" );
+                    }else {
+                        Toast.makeText(MainActivity.this, "You don't choose the unit", Toast.LENGTH_SHORT).show();
+                    }
+
+
                 } catch (Exception e) {
                     //e.printStackTrace();
                     Toast.makeText(MainActivity.this, "Wrong Input", Toast.LENGTH_SHORT).show();
                 }
-                if(celisuis.isChecked()){
-                    double celisuisTemp =(temperature - 32) * 5/9;
-                    result.setText("Result is: "+ celisuisTemp +" C" );
-                    
-                }else if(fahrenheit.isChecked()){
-                    double faherhnietTemp =  (temperature * 9/5) + 32;
-                    result.setText("Result is: " + faherhnietTemp +" F" );
-                }else {
-                    Toast.makeText(MainActivity.this, "You don't choose the unit", Toast.LENGTH_SHORT).show();
-                }
+
 
             }
         });

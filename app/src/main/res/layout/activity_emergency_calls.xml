@@ -4,122 +4,126 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="hsport.com.example.king.mactrial.EmergencyCalls">
+    android:background="@drawable/emerback"
+    tools:context="hsport.com.example.king.mactrial.EmergencyCalls"
+    tools:layout_editor_absoluteY="81dp">
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <android.support.constraint.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="54dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="44dp"
-            android:background="@android:color/darker_gray"
-            android:gravity="center_horizontal"
-            android:text="Emergency Calls"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/police"
-            app:layout_constraintEnd_toStartOf="@+id/imageView4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:scaleType="fitCenter"
-            app:layout_constraintBottom_toBottomOf="@+id/textView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toTopOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.888"
-            app:srcCompat="@drawable/callse" />
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toTopOf="@+id/imageView7"
+                app:srcCompat="@drawable/callswhite" />
 
-        <Button
-            android:id="@+id/police"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="31dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:background="@android:color/darker_gray"
-            android:onClick="callPolice"
-            android:text="Police"
-            android:textColor="@android:color/holo_red_dark"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/ambulance"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            <Button
+                android:id="@+id/police"
+                android:layout_width="269dp"
+                android:layout_height="39dp"
+                android:layout_marginBottom="31dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="135dp"
 
-        <Button
-            android:id="@+id/ambulance"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="32dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:background="@android:color/darker_gray"
-            android:onClick="callAmbulance"
-            android:text="Ambulance"
-            android:textColor="@android:color/holo_red_dark"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/fire"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/police" />
+                android:background="#116570"
+                android:onClick="callPolice"
+                android:text="Police"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toTopOf="@+id/ambulance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.508"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/fire"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="30dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:background="@android:color/darker_gray"
-            android:onClick="callFire"
-            android:text="Firefighter"
-            android:textColor="@android:color/holo_red_dark"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/elec"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ambulance" />
+            <Button
+                android:id="@+id/ambulance"
+                android:layout_width="269dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="32dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:background="#116570"
+                android:onClick="callAmbulance"
+                android:text="Ambulance"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toTopOf="@+id/fire"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/police" />
 
-        <Button
-            android:id="@+id/elec"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="172dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:background="@android:color/darker_gray"
-            android:onClick="callElec"
-            android:text="electricity "
-            android:textColor="@android:color/holo_red_dark"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fire" />
+            <Button
+                android:id="@+id/fire"
+                android:layout_width="269dp"
+                android:layout_height="39dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:background="#116570"
+                android:onClick="callFire"
+                android:text="Firefighter"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toTopOf="@+id/elec"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ambulance" />
 
-    </android.support.constraint.ConstraintLayout>
-</ScrollView>
+            <Button
+                android:id="@+id/elec"
+                android:layout_width="269dp"
+                android:layout_height="39dp"
+                android:layout_marginBottom="172dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:background="#116570"
+                android:onClick="callElec"
+                android:text="Electricity "
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fire" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="262dp"
+                android:layout_height="94dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toTopOf="@+id/police"
+                app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.852"
+                app:srcCompat="@drawable/emerlogo" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 
 
 </android.support.constraint.ConstraintLayout>

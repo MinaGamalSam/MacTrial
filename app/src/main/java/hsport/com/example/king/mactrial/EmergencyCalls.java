@@ -21,17 +21,17 @@ public class EmergencyCalls extends AppCompatActivity {
     }
 
     public void callAmbulance(View view) {
-        Intent calls =new Intent(Intent.ACTION_CALL , Uri.parse("tel:122"));
+        Intent calls =new Intent(Intent.ACTION_CALL , Uri.parse("tel:121"));
         startActivity(calls);
     }
 
     public void callFire(View view) {
-        Intent calls =new Intent(Intent.ACTION_CALL , Uri.parse("tel:122"));
+        Intent calls =new Intent(Intent.ACTION_CALL , Uri.parse("tel:123"));
         startActivity(calls);
     }
 
     public void callElec(View view) {
-        Intent calls =new Intent(Intent.ACTION_CALL , Uri.parse("tel:122"));
+        Intent calls =new Intent(Intent.ACTION_CALL , Uri.parse("tel:124"));
         startActivity(calls);
     }
 }

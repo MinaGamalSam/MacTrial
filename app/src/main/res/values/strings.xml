@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AppTrial</string>
+    <string name="register">Registration</string>
 </resources>
